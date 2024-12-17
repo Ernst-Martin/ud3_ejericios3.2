@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    build: .
+    container_name: mariadb-server
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: m1_s3cr3t
+      MYSQL_USER: ig
+      MYSQL_PASSWORD: m1_s3cr3t
