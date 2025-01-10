@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\ServiceProvider;
+
 return [
 
     /*
@@ -66,6 +68,12 @@ return [
     */
 
     'timezone' => env('APP_TIMEZONE', 'UTC'),
+
+    'providers' => ServiceProvider::defaultProviders()->merge([
+    App\Providers\AppServiceProvider::class,
+
+    App\Providers\RouteServiceProvider::class,
+])->toArray(),
 
     /*
     |--------------------------------------------------------------------------
